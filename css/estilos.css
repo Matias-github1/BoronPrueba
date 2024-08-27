@@ -1,0 +1,863 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Transicion suave*/
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 30px;
+    margin-left: 45px;
+    position: fixed;
+    width: 1350px;
+} 
+header figure {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logo {
+    transition: all 0.3s ease-in-out;
+}
+
+
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+#nav-links li {
+    margin: 0 20px;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.search-icon {
+    width: 25px;
+    height: auto;
+}
+
+.social-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: auto;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+}
+
+.dropdown-menu.visible {
+    display: block;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #000;
+    margin-left: 642px;
+    width: 60%;
+    height: 970px;
+    position: relative;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; 
+}
+
+.nav-list li {
+    margin-bottom: 1rem;
+}
+
+#cerrar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    padding: 55px;
+    top: 10px;
+    right: 10px; 
+}
+
+#cerrar::after {
+    content: '✖'; /*estetico*/
+    margin-left: 20px; /* Espacio entre la 'X' y el texto */
+}
+
+/*----------------------------------*/
+/* Enlaces del menú */
+
+.nav-list li a {
+    padding: 30px 20px;
+    text-align: start;
+    font-size: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+
+.search-enes {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 30px;
+}
+
+.searchWhite {
+    width: 25px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.en-es {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Estilo para la sección de Newsletter y redes sociales */
+.newsletter-social {
+    padding: 30px 20px;
+}
+
+.newsletter-box {
+    width: 88%; 
+    max-width: 800px; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-text {
+    width: calc(100% - 160px); 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #77D7DB;
+    padding: 10px;
+}
+
+.arrow {
+    width: 20px;
+    height: auto;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: -35px; /* Subir los íconos */
+    margin-left: 40px;
+
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Menú hamburguesa al hacer scroll */
+.scrolled .hamburger {
+    display: flex;
+}
+
+.scrolled #nav-links {
+    display: none;
+}
+
+
+
+.scrolled #nav-links li {
+    margin: 10px 0;
+}
+
+.scrolled #main-logo {
+    content: url('img/logoMenu.png'); /* Cambia el logo en el estado de hamburguesa */
+}
+
+/*------------------------------Bienvenidos--------------------------------------------------------*/
+.container{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4);
+    grid-template-rows: 215px 393px repeat(3, 300px) repeat(5, 730px) 478px;
+}
+
+
+.principalGrid {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    max-width: 1380px; /* Ancho máximo para mantener el diseño */
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.principalGrid h1{
+    grid-column: 1/2; /*Organiza la division de los contenidos en las columnas*/
+    grid-row: 1/2; /*Organiza la division de los contenidos en las filas*/
+    color: rgb(0, 0, 0);
+    font-size: 205px;
+    text-align: left;
+}
+
+.principalGrid p{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    font-size: 64px;
+    text-align: left;  
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: #77D7DB; /* Subtitulos segun el diseño mostrado*/
+    padding: 2px 5px;          /* Espacio alrededor del texto */
+  }
+
+
+/* Animación para logos-slide */
+@keyframes slide-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/*Ajuste medidas imagenes*/
+#planta {
+    width: 450px;  /* Ancho fijo */
+    height: 300px; 
+}
+#campo {
+    width: 450px; 
+    height: 300px; 
+}
+
+.logos {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;  
+    overflow: hidden;    /* Ocultar desbordamiento */
+    padding: 0;    
+}
+
+.logos-slide {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+    white-space: nowrap; /* Evita que el contenido se rompa en líneas nuevas */
+    animation: slide-left 120s infinite linear; /* Controla la animación hacia la izquierda */
+}
+
+.logos-slide img, 
+.logos-slide h1 {
+    display: inline-block;
+    vertical-align: middle; 
+    height: 300px;
+    margin-left: 40px;  /* Añade espacio entre las imágenes y el texto */
+    margin-right: 40px; /* Añade espacio entre las imágenes y el texto */
+}
+
+.logos-slide h1 {
+    justify-content: center;     
+    align-items: center;         
+    font-size: 100px;            
+    font-weight: bold;           /* Negrita */
+    text-align: center;          /* Centrar el texto dentro del contenedor */
+    height: 100%;                
+    width: 300px;                
+}
+
+/*----------------------------------------------------------------------*/
+.logos3 {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    place-items: center; /* Centra horizontal y verticalmente */
+    height: 300px;       
+    overflow: hidden;    /* Oculta cualquier desbordamiento */
+    padding: 0;          /* Remueve el padding para un centrado preciso */
+}
+
+.logos-slide3 {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+    white-space: nowrap; /* Evita que el contenido se rompa en líneas nuevas */
+    animation: slide-left 120s infinite linear; /* Controla la animación hacia la izquierda */
+}
+
+.logos-slide3 img, 
+.logos-slide3 h1 {
+    display: inline-block; /* Asegura que los elementos se coloquen uno tras otro */
+    vertical-align: middle; /* Alinea los elementos verticalmente */
+    height: 300px;
+    margin-left: 40px;
+    margin-right: 40px; /* Añade espacio entre las imágenes y el texto */
+}
+
+.logos-slide3 h1 {
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    font-size: 100px;            
+    font-weight: bold;           /* Negrita */
+    text-align: center;          /* Centrar el texto dentro del contenedor */
+    height: 100%;                
+    width: 300px;                
+    margin-right: 140px;
+}
+
+.logos2 {
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;       
+    overflow: hidden;    /* Oculta cualquier desbordamiento */
+    padding: 0;          /* Remueve el padding para un centrado preciso */
+}
+
+.logos-slide2 {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+    white-space: nowrap; /* Evita que el contenido se rompa en líneas nuevas */
+    animation: slide-right 120s infinite linear; /* Controla la animación hacia la derecha */
+    width: calc((300px + 80px) * 18);
+}
+
+.logos-slide2 img, 
+.logos-slide2 h1 {
+    display: inline-block; 
+    vertical-align: middle; 
+    height: 300px;
+    margin-left: 40px;
+    margin-right: 40px; 
+}
+
+.logos-slide2 h1 {
+    justify-content: center;     
+    align-items: center;         
+    font-size: 100px;            
+    font-weight: bold;           
+    text-align: center;          
+    height: 100%;                
+    width: 300px;                
+}
+
+#tecnología{
+    margin-right: 300px;
+}
+
+#innovación{
+    margin-right: 300px;
+
+}
+
+/* Animación para logos-slide2 (mueve hacia la derecha) */
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/*-------------------------------ACERCADE-------------------------------------*/
+.acercaDe {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    grid-template-columns: repeat(1, 1440px);
+    grid-template-rows: repeat(1, 730px);
+    background-color: #FF5E43;
+    height: 750px;
+}
+
+.acercaDe p {
+    display: grid;
+    justify-content: center;
+    margin-left: 75px;
+    width: 90%;
+    font-size: 64px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+  /*-------------------------------Proyectos-------------------------------*/
+
+  .proyectos {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 720px);
+    grid-template-rows: repeat(2, 730px);
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+}
+
+.proyectoTopLeft {
+    background-color: #77D7DB;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: left;
+}
+
+.proyectoTopLeft p{
+    text-align: left;
+    font-size: 16px;
+    margin: 100px;
+    font-weight: bold;
+}
+
+.proyectoTopLeft .nuestroEnfoque{
+    letter-spacing: 2px;
+}
+
+.proyectoTopLeft .parrafoProyecto{
+    text-align: left;
+    font-size: 25px;
+    margin-top: 330px;
+}
+
+.proyectoDownRight {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #1DA1F2;
+    text-align: left;
+}
+
+
+
+.proyectoDownRight p{
+    text-align: left;
+    font-size: 16px;
+    margin: 90px;
+    font-weight: bold;
+}
+
+.proyecto1 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.proyectoGrupo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;            /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;           /* Mantiene la proporción de la imagen */
+    object-fit: cover;      /* Recortala imagen para llenar el contenedor */
+}
+
+
+/*------------------------------------------------*/
+.proyectoDownRight {
+    display: grid; /* Grid para centrar contenido */
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.twitter{
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Negrita al texto */
+    letter-spacing: 2px;
+    font-size: 30px; /* tamaño del texto */
+}
+
+.twitterImg {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; 
+    margin: 20px 0; 
+}
+
+.proyectoDownRight h1 {
+    font-weight: bold; /* negrita al texto */
+    font-size: 45px; /* tamaño del texto */
+}
+
+.proyectoDownRight p {
+    margin: 10px 0;
+}
+
+
+
+.hashtag {
+    color: white;         /* Color del texto */
+    font-size: 26px;      /* Tamaño de fuente */
+    font-weight: bold;    /* Negrita */
+}
+
+.link {
+    color: white;         
+    font-size: 26px;     
+    text-decoration: none; 
+}
+
+.slider-text p{
+    font-size: 26px;
+
+}
+
+.slider-row {
+    display: flex;              
+    justify-content: space-between; 
+    align-items: center;      
+    width: 100%;               
+    margin-top: 100px;
+}
+
+/*--------------------------------------------------------------------*/
+.repository-module {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.repositorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;  
+    margin-bottom: 40px; /* Aumenta el margen inferior */
+}
+
+.repositorio h1 {
+    font-size: 82px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.repositorio .subtitle {
+    font-size: 16px;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #000; /* Línea horizontal */
+    margin: 20px 0;
+}
+
+.section {
+    position: relative; /* Necesario para posicionar la imagen de hover */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.section .title {
+    font-size: 35px;
+}
+
+.arrow {
+    width: 30px;
+    height: auto;
+    transition: src 0.3s ease; /* Transición para el cambio de imagen */
+}
+
+
+.hover-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Asegura que la imagen no interfiera con otros elementos */
+}
+
+.section:hover .hover-image {
+    opacity: 1;
+}
+
+.hover-image img {
+    width: 350px; 
+    height: auto;
+}
+
+
+
+
+
+/*------------------------------Novedades-------------------------------------*/
+.novedades {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+}
+
+.novedades h1 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 132px;
+    text-align: center;
+}
+
+.novedad-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    padding: 5px;
+}
+
+.novedad-content h2 {
+    margin-top: 15px;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+    padding: 25px;
+}
+
+.novedad-content h2::after {
+    content: " +";
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    right: 40px;
+    top: 25px;
+}
+
+.novedad-content p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 35px;
+    padding-bottom: 75px;
+}
+
+.novedad-item {
+    position: relative;
+    width: 100%;
+    height: 480px; /* altura de la celda */
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* para que no se vea un fondo blanco al momento de la trnasision le coloque su color de fondo, 
+entiendo que debe de existir una manera mas eficiente que esta pero quedo funcionando*/
+.novedad-item:nth-child(1) {
+    background-color: #40B5E0; 
+}
+
+.novedad-item:nth-child(2) {
+    background-color: #77D7DB;
+}
+
+.novedad-item:nth-child(3) {
+    background-color: #44D19D;
+}
+
+.novedad-item:nth-child(4) {
+    background-color: #FEDA3C;
+}
+
+
+.rectIni {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: visibility 0.5s ease;
+}
+
+/*--------------------Configuración de la superposición (overlay)-------------------------*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ----------------------------------- Animación de la superposición en el hover ----------------------------------- */
+.novedad-item:hover .overlay {
+    opacity: 1;
+}
+/* ------------------------------ Configuración general para las imágenes secundarias y de novedades ------------------------------ */
+.rectSeg,
+.novedadImg {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(-100%); /* Comienza desde fuera de la vista, arriba */
+    transition: transform 0.5s ease-in-out; /* Controla la velocidad del deslizamiento */
+}
+
+.rectSeg {
+    height: 65%;
+    bottom: 0;
+    z-index: 2; /* Asegura que esta imagen esté por encima de la imagen de novedad */
+}
+
+.novedadImg {
+    height: 60%;
+    top: 0;
+    z-index: 1;/* Asegura que esta imagen esté debajo de la imagen secundaria */
+}
+
+.novedad-item:hover .rectIni,
+.novedad-item:hover .novedad-content h2 {
+    visibility: hidden;   /* Esconde la imagen inicial y el título al hacer hover */
+    opacity: 0;  /* Asegura que desaparezcan suavemente */
+}
+
+.novedad-item:hover .rectSeg,
+.novedad-item:hover .novedadImg {
+    transform: translateY(0); /* Mueve las imágenes a su posición original */
+}
+
+/* --------------------------------------footer----------------------------------------------*/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 62px;
+    box-sizing: border-box;
+}
+
+.footer-item {
+    padding: 10px;
+}
+
+.footer-logo {
+    display: block;
+    max-width: 150px;
+}
+
+#novedadesP{
+    margin-top: 30%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.newsletter {
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    background-color: #77D7DB;
+    padding: 10px;
+    margin-top: 30px;
+    padding-left: 40px;
+}
+
+.arrow {
+    
+    margin-left: 10px;
+    width: 25px;
+}
+
+.footer-item-2 p {
+    margin-top: 80%;
+}
+
+.footer-item-3{
+    margin-top: 70%;
+}
+
+.footer-item-4 a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    margin-top: 15px;
+}
+
+.footer-item-4 a:hover {
+    text-decoration: underline;
+}
